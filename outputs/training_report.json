@@ -1,6 +1,7 @@
 {
   "score": 7.2905,
   "selected_config": {
+    "model_type": "elo_only",
     "N": 10,
     "min_matches": 10,
     "form_window": 5,
@@ -8,7 +9,9 @@
     "xg_ceiling": 5.0,
     "xg_floor": 0.25,
     "scaling_factor": 1.0,
-    "elo_weight": 0.7,
+    "blend_elo_share": 0.5,
+    "elo_goal_slope": 800,
+    "base_xg": 1.25,
     "neutral_blend_threshold": 5,
     "max_goals_simulated": 10,
     "match_weights": {
@@ -24,10 +27,8 @@
       "OFC Nations Cup": 1.0,
       "UEFA Nations League": 0.8
     },
-    "model_type": "elo_only",
-    "blend_elo_share": 0.5,
-    "elo_goal_slope": 800,
-    "base_xg": 1.25
+    "elo_variant": "simple",
+    "form_elo_weight": 0.0
   },
   "reports": [
     {

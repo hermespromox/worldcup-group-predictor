@@ -54,7 +54,7 @@ def train(args):
     payload={"score":best["score"],"selected_config":best["config"],"reports":best["reports"]}
     Path(args.output).parent.mkdir(parents=True,exist_ok=True)
     Path(args.output).write_text(json.dumps(payload,indent=2,ensure_ascii=False),encoding="utf-8")
-    print("selected:", json.dumps({k:best['config'].get(k) for k in ['model_type','N','scaling_factor','xg_floor','blend_elo_share','elo_goal_slope','base_xg']}, ensure_ascii=False))
+    print("selected:", json.dumps({k:best['config'].get(k) for k in ['elo_variant','model_type','N','scaling_factor','xg_floor','blend_elo_share','elo_goal_slope','base_xg','form_elo_weight']}, ensure_ascii=False))
     print("WC | strict groups | top2 overlap | winners | rank acc | pts corr")
     for r in best["reports"]:
         print(f"{r['year']} | {r['qualification_accuracy_groups']}/8 | {r['top2_overlap_avg']}/2 | {r['winners_correct']}/8 | {r['rank_accuracy']} | {r['points_correlation']}")

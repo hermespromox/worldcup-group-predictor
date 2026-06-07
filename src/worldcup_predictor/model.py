@@ -66,6 +66,10 @@ def _elo_expected_goals(row_a: dict, row_b: dict, cfg: dict) -> tuple[float, flo
     ceiling = float(cfg.get("xg_ceiling", 5.0))
     floor = float(cfg.get("xg_min", 0.15))
     elo_diff = float(row_a.get("elo", 1500.0)) - float(row_b.get("elo", 1500.0))
+    form_weight = float(cfg.get("form_elo_weight", 0.0))
+    if form_weight:
+        form_diff = float(row_a.get("opponent_adjusted_form", 0.0)) - float(row_b.get("opponent_adjusted_form", 0.0))
+        elo_diff += form_diff * form_weight
     xg_a = base * (10.0 ** (elo_diff / slope))
     xg_b = base * (10.0 ** (-elo_diff / slope))
     return min(max(xg_a, floor), ceiling), min(max(xg_b, floor), ceiling)

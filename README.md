@@ -42,7 +42,7 @@ Current trained validation summary:
 - 2018: strict qualifiers 5/8, top-2 overlap 1.625/2, winners 5/8
 - 2022: strict qualifiers 2/8, top-2 overlap 1.25/2, winners 6/8
 
-The selected model is currently `elo_only`: it uses an international Elo rating computed only from matches before each cutoff, then converts Elo differences into xG for Poisson group simulation. This performed better overall than the raw recent-goals model on top-2 overlap.
+The selected model is currently `elo_only` with `elo_variant: simple`: it uses an international Elo rating computed only from matches before each cutoff, then converts Elo differences into xG for Poisson group simulation. The repo now also includes an advanced Elo candidate with match importance, home/neutral handling, time decay, margin-of-victory, and opponent-adjusted form features; validation currently selects the simpler Elo because it performs better on 2014/2018/2022.
 
 ## Status
 
