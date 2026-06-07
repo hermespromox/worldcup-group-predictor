@@ -1,0 +1,21 @@
+N: 20
+min_matches: 10
+form_window: 5
+recency_decay: 0.9
+xg_ceiling: 5.0
+xg_floor: 0.25
+scaling_factor: 1.0
+neutral_blend_threshold: 5
+max_goals_simulated: 10
+match_weights:
+  default: 0.7
+  Friendly: 0.4
+  FIFA World Cup: 1.2
+  FIFA World Cup qualification: 1.0
+  UEFA Euro: 1.0
+  Copa América: 1.0
+  African Cup of Nations: 1.0
+  AFC Asian Cup: 1.0
+  CONCACAF Gold Cup: 1.0
+  OFC Nations Cup: 1.0
+  UEFA Nations League: 0.8
