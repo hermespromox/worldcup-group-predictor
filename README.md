@@ -26,6 +26,24 @@ python -m worldcup_predictor.cli predict-2026 --cutoff 2026-06-10
 
 Output is written to `outputs/predictions_2026.json`.
 
+## Training / validation
+
+The default `config.yaml` is now calibrated against 2014, 2018, and 2022 group stages.
+
+```bash
+PYTHONPATH=src python -m worldcup_predictor.cli validate
+PYTHONPATH=src python -m worldcup_predictor.cli train
+PYTHONPATH=src python -m worldcup_predictor.cli predict-2026
+```
+
+Current trained validation summary:
+
+- 2014: strict qualifiers 3/8, top-2 overlap 1.375/2, winners 5/8
+- 2018: strict qualifiers 5/8, top-2 overlap 1.625/2, winners 5/8
+- 2022: strict qualifiers 1/8, top-2 overlap 1.125/2, winners 7/8
+
+The model uses recent form + neutral goal metrics + an Elo prior computed from historical matches before the cutoff date.
+
 ## Status
 
-MVP: 2026 official group prediction engine implemented. Validation against 2014/2018/2022 and FIFA baseline scaffolding is next.
+Usable trained MVP: validation, training, and 2026 prediction all run locally. FIFA ranking baseline still needs historical ranking snapshots.

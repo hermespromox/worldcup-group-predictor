@@ -67,6 +67,14 @@ def expected_goals(row_a: dict, row_b: dict, league_avg_scored: float, cfg: dict
     attack_b = max(float(row_b["neutral_avg_goals_scored"]) / avg, floor)
     defensive_weakness_a = max(float(row_a["neutral_avg_goals_conceded"]) / avg, floor)
     defensive_weakness_b = max(float(row_b["neutral_avg_goals_conceded"]) / avg, floor)
-    xg_a = min(attack_a * defensive_weakness_b * avg * scale, ceiling)
-    xg_b = min(attack_b * defensive_weakness_a * avg * scale, ceiling)
-    return xg_a, xg_b
+    xg_a = attack_a * defensive_weakness_b * avg * scale
+    xg_b = attack_b * defensive_weakness_a * avg * scale
+    elo_weight = float(cfg.get("elo_weight", 0.0))
+    if elo_weight and "elo" in row_a and "elo" in row_b:
+        elo_diff = float(row_a["elo"]) - float(row_b["elo"])
+        # 400 Elo ~= 10x odds; use a softer exponent for goals so priors help but don't dominate.
+        elo_mult_a = 10.0 ** ((elo_diff / 800.0) * elo_weight)
+        elo_mult_b = 10.0 ** ((-elo_diff / 800.0) * elo_weight)
+        xg_a *= elo_mult_a
+        xg_b *= elo_mult_b
+    return min(xg_a, ceiling), min(xg_b, ceiling)

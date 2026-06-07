@@ -1,5 +1,6 @@
 from __future__ import annotations
 import pandas as pd
+from .elo import compute_elo_ratings
 
 def _team_matches(results: pd.DataFrame, team: str, cutoff: str | pd.Timestamp) -> pd.DataFrame:
     cutoff = pd.Timestamp(cutoff)
@@ -14,6 +15,7 @@ def _team_matches(results: pd.DataFrame, team: str, cutoff: str | pd.Timestamp) 
     return df
 
 def compute_team_features(results: pd.DataFrame, teams: list[str], cutoff: str | pd.Timestamp, cfg: dict) -> pd.DataFrame:
+    elo_ratings = compute_elo_ratings(results, teams, cutoff)
     rows=[]; n=int(cfg.get("N",20)); min_matches=int(cfg.get("min_matches",10)); neutral_threshold=int(cfg.get("neutral_blend_threshold",5))
     for team in teams:
         allm = _team_matches(results, team, cutoff)
@@ -21,7 +23,7 @@ def compute_team_features(results: pd.DataFrame, teams: list[str], cutoff: str |
         used = len(m)
         sparse = used < min_matches
         if used == 0:
-            rows.append({"team": team, "matches_used":0, "neutral_matches_used":0, "sparse_data_flag": True,
+            rows.append({"team": team, "elo": elo_ratings.get(team, 1500.0), "matches_used":0, "neutral_matches_used":0, "sparse_data_flag": True,
                          "win_rate":0.33, "draw_rate":0.34, "loss_rate":0.33, "avg_goals_scored":1.2,
                          "avg_goals_conceded":1.2, "avg_goal_diff":0.0, "form_score":0.0,
                          "neutral_avg_goals_scored":1.2, "neutral_avg_goals_conceded":1.2})
@@ -39,7 +41,7 @@ def compute_team_features(results: pd.DataFrame, teams: list[str], cutoff: str |
         if len(neutral) < neutral_threshold:
             alpha=len(neutral)/neutral_threshold
             ngf=alpha*ngf+(1-alpha)*gf; nga=alpha*nga+(1-alpha)*ga
-        rows.append({"team":team,"matches_used":used,"neutral_matches_used":len(neutral),"sparse_data_flag":sparse,
+        rows.append({"team":team,"elo": elo_ratings.get(team, 1500.0),"matches_used":used,"neutral_matches_used":len(neutral),"sparse_data_flag":sparse,
                      "win_rate":wins,"draw_rate":draws,"loss_rate":losses,"avg_goals_scored":gf,"avg_goals_conceded":ga,
                      "avg_goal_diff":gf-ga,"form_score":form_score,"neutral_avg_goals_scored":ngf,"neutral_avg_goals_conceded":nga})
     out=pd.DataFrame(rows)
