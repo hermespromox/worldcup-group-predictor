@@ -1,5 +1,5 @@
 {
-  "score": 7.441,
+  "score": 7.2905,
   "selected_config": {
     "N": 10,
     "min_matches": 10,
@@ -23,25 +23,29 @@
       "CONCACAF Gold Cup": 1.0,
       "OFC Nations Cup": 1.0,
       "UEFA Nations League": 0.8
-    }
+    },
+    "model_type": "elo_only",
+    "blend_elo_share": 0.5,
+    "elo_goal_slope": 800,
+    "base_xg": 1.25
   },
   "reports": [
     {
       "year": 2014,
-      "qualification_accuracy_groups": 3,
-      "top2_overlap_avg": 1.375,
+      "qualification_accuracy_groups": 2,
+      "top2_overlap_avg": 1.25,
       "winners_correct": 5,
-      "rank_accuracy": 0.469,
-      "points_correlation": 0.544,
+      "rank_accuracy": 0.5,
+      "points_correlation": 0.527,
       "groups": [
         {
           "group": "A",
           "predicted": [
             {
               "team": "Brazil",
-              "predicted_pts": 8.29,
-              "predicted_gd": 7.836,
-              "predicted_gf": 8.489,
+              "predicted_pts": 7.943,
+              "predicted_gd": 7.416,
+              "predicted_gf": 9.026,
               "matches_used": 10,
               "neutral_matches_used": 4,
               "sparse_data_flag": false,
@@ -49,9 +53,9 @@
             },
             {
               "team": "Mexico",
-              "predicted_pts": 3.751,
-              "predicted_gd": -1.03,
-              "predicted_gf": 2.501,
+              "predicted_pts": 3.823,
+              "predicted_gd": -0.855,
+              "predicted_gf": 3.764,
               "matches_used": 10,
               "neutral_matches_used": 4,
               "sparse_data_flag": false,
@@ -59,9 +63,9 @@
             },
             {
               "team": "Croatia",
-              "predicted_pts": 2.915,
-              "predicted_gd": -2.143,
-              "predicted_gf": 1.779,
+              "predicted_pts": 3.679,
+              "predicted_gd": -1.111,
+              "predicted_gf": 3.648,
               "matches_used": 10,
               "neutral_matches_used": 1,
               "sparse_data_flag": false,
@@ -69,9 +73,9 @@
             },
             {
               "team": "Cameroon",
-              "predicted_pts": 1.772,
-              "predicted_gd": -4.664,
-              "predicted_gf": 1.275,
+              "predicted_pts": 1.526,
+              "predicted_gd": -5.45,
+              "predicted_gf": 2.092,
               "matches_used": 10,
               "neutral_matches_used": 2,
               "sparse_data_flag": false,
@@ -113,7 +117,7 @@
             "top2_overlap": 2,
             "winner_correct": true,
             "rank_correct": 4,
-            "points_corr": 0.7522460702995831
+            "points_corr": 0.7770435068104325
           }
         },
         {
@@ -121,9 +125,9 @@
           "predicted": [
             {
               "team": "Spain",
-              "predicted_pts": 6.873,
-              "predicted_gd": 5.62,
-              "predicted_gf": 7.468,
+              "predicted_pts": 6.903,
+              "predicted_gd": 4.652,
+              "predicted_gf": 6.812,
               "matches_used": 10,
               "neutral_matches_used": 2,
               "sparse_data_flag": false,
@@ -131,9 +135,9 @@
             },
             {
               "team": "Netherlands",
-              "predicted_pts": 4.939,
-              "predicted_gd": 2.287,
-              "predicted_gf": 5.949,
+              "predicted_pts": 4.748,
+              "predicted_gd": 0.95,
+              "predicted_gf": 4.491,
               "matches_used": 10,
               "neutral_matches_used": 1,
               "sparse_data_flag": false,
@@ -141,9 +145,9 @@
             },
             {
               "team": "Chile",
-              "predicted_pts": 4.826,
-              "predicted_gd": 2.514,
-              "predicted_gf": 6.935,
+              "predicted_pts": 3.562,
+              "predicted_gd": -0.964,
+              "predicted_gf": 3.535,
               "matches_used": 10,
               "neutral_matches_used": 3,
               "sparse_data_flag": false,
@@ -151,9 +155,9 @@
             },
             {
               "team": "Australia",
-              "predicted_pts": 0.435,
-              "predicted_gd": -10.421,
-              "predicted_gf": 2.51,
+              "predicted_pts": 1.578,
+              "predicted_gd": -4.638,
+              "predicted_gf": 2.165,
               "matches_used": 10,
               "neutral_matches_used": 5,
               "sparse_data_flag": false,
@@ -195,7 +199,7 @@
             "top2_overlap": 1,
             "winner_correct": false,
             "rank_correct": 1,
-            "points_corr": 0.5436211796846606
+            "points_corr": 0.35749951391490276
           }
         },
         {
@@ -203,41 +207,41 @@
           "predicted": [
             {
               "team": "Colombia",
-              "predicted_pts": 5.707,
-              "predicted_gd": 2.485,
-              "predicted_gf": 4.466,
+              "predicted_pts": 5.071,
+              "predicted_gd": 1.367,
+              "predicted_gf": 4.499,
               "matches_used": 10,
               "neutral_matches_used": 4,
               "sparse_data_flag": false,
               "predicted_rank": 1
             },
             {
-              "team": "Greece",
-              "predicted_pts": 4.525,
-              "predicted_gd": 0.733,
-              "predicted_gf": 2.478,
+              "team": "Japan",
+              "predicted_pts": 4.218,
+              "predicted_gd": 0.165,
+              "predicted_gf": 3.852,
               "matches_used": 10,
-              "neutral_matches_used": 2,
+              "neutral_matches_used": 3,
               "sparse_data_flag": false,
               "predicted_rank": 2
             },
             {
-              "team": "Japan",
-              "predicted_pts": 4.489,
-              "predicted_gd": 0.986,
-              "predicted_gf": 4.995,
+              "team": "Ivory Coast",
+              "predicted_pts": 3.653,
+              "predicted_gd": -0.639,
+              "predicted_gf": 3.46,
               "matches_used": 10,
-              "neutral_matches_used": 3,
+              "neutral_matches_used": 4,
               "sparse_data_flag": false,
               "predicted_rank": 3
             },
             {
-              "team": "Ivory Coast",
-              "predicted_pts": 1.6,
-              "predicted_gd": -4.204,
-              "predicted_gf": 2.123,
+              "team": "Greece",
+              "predicted_pts": 3.478,
+              "predicted_gd": -0.893,
+              "predicted_gf": 3.343,
               "matches_used": 10,
-              "neutral_matches_used": 4,
+              "neutral_matches_used": 2,
               "sparse_data_flag": false,
               "predicted_rank": 4
             }
@@ -273,41 +277,41 @@
             }
           ],
           "metrics": {
-            "qualification_exact": true,
-            "top2_overlap": 2,
+            "qualification_exact": false,
+            "top2_overlap": 1,
             "winner_correct": true,
             "rank_correct": 2,
-            "points_corr": 0.5261010687559348
+            "points_corr": 0.6749628459291726
           }
         },
         {
           "group": "D",
           "predicted": [
             {
-              "team": "Uruguay",
-              "predicted_pts": 6.297,
-              "predicted_gd": 3.382,
-              "predicted_gf": 4.602,
+              "team": "England",
+              "predicted_pts": 5.822,
+              "predicted_gd": 2.648,
+              "predicted_gf": 5.387,
               "matches_used": 10,
-              "neutral_matches_used": 0,
+              "neutral_matches_used": 2,
               "sparse_data_flag": false,
               "predicted_rank": 1
             },
             {
-              "team": "England",
-              "predicted_pts": 5.492,
-              "predicted_gd": 2.019,
-              "predicted_gf": 3.428,
+              "team": "Uruguay",
+              "predicted_pts": 4.956,
+              "predicted_gd": 1.303,
+              "predicted_gf": 4.588,
               "matches_used": 10,
-              "neutral_matches_used": 2,
+              "neutral_matches_used": 0,
               "sparse_data_flag": false,
               "predicted_rank": 2
             },
             {
               "team": "Italy",
-              "predicted_pts": 3.457,
-              "predicted_gd": -0.675,
-              "predicted_gf": 2.087,
+              "predicted_pts": 4.188,
+              "predicted_gd": 0.138,
+              "predicted_gf": 3.965,
               "matches_used": 10,
               "neutral_matches_used": 2,
               "sparse_data_flag": false,
@@ -315,9 +319,9 @@
             },
             {
               "team": "Costa Rica",
-              "predicted_pts": 1.139,
-              "predicted_gd": -4.726,
-              "predicted_gf": 0.889,
+              "predicted_pts": 1.681,
+              "predicted_gd": -4.088,
+              "predicted_gf": 2.243,
               "matches_used": 10,
               "neutral_matches_used": 3,
               "sparse_data_flag": false,
@@ -358,8 +362,8 @@
             "qualification_exact": false,
             "top2_overlap": 1,
             "winner_correct": false,
-            "rank_correct": 1,
-            "points_corr": -0.4209895965747113
+            "rank_correct": 2,
+            "points_corr": -0.7371362259326378
           }
         },
         {
@@ -367,9 +371,9 @@
           "predicted": [
             {
               "team": "France",
-              "predicted_pts": 8.214,
-              "predicted_gd": 9.805,
-              "predicted_gf": 10.808,
+              "predicted_pts": 5.994,
+              "predicted_gd": 2.887,
+              "predicted_gf": 5.526,
               "matches_used": 10,
               "neutral_matches_used": 0,
               "sparse_data_flag": false,
@@ -377,9 +381,9 @@
             },
             {
               "team": "Switzerland",
-              "predicted_pts": 5.251,
-              "predicted_gd": 2.134,
-              "predicted_gf": 5.167,
+              "predicted_pts": 4.574,
+              "predicted_gd": 0.703,
+              "predicted_gf": 4.247,
               "matches_used": 10,
               "neutral_matches_used": 0,
               "sparse_data_flag": false,
@@ -387,9 +391,9 @@
             },
             {
               "team": "Ecuador",
-              "predicted_pts": 3.252,
-              "predicted_gd": -2.767,
-              "predicted_gf": 4.149,
+              "predicted_pts": 4.228,
+              "predicted_gd": 0.182,
+              "predicted_gf": 3.975,
               "matches_used": 10,
               "neutral_matches_used": 5,
               "sparse_data_flag": false,
@@ -397,9 +401,9 @@
             },
             {
               "team": "Honduras",
-              "predicted_pts": 0.584,
-              "predicted_gd": -9.172,
-              "predicted_gf": 1.401,
+              "predicted_pts": 1.832,
+              "predicted_gd": -3.772,
+              "predicted_gf": 2.333,
               "matches_used": 10,
               "neutral_matches_used": 5,
               "sparse_data_flag": false,
@@ -441,7 +445,7 @@
             "top2_overlap": 2,
             "winner_correct": true,
             "rank_correct": 4,
-            "points_corr": 0.9521074036961422
+            "points_corr": 0.9748187393017242
           }
         },
         {
@@ -449,9 +453,9 @@
           "predicted": [
             {
               "team": "Argentina",
-              "predicted_pts": 6.927,
-              "predicted_gd": 3.935,
-              "predicted_gf": 4.478,
+              "predicted_pts": 7.255,
+              "predicted_gd": 5.082,
+              "predicted_gf": 7.071,
               "matches_used": 10,
               "neutral_matches_used": 2,
               "sparse_data_flag": false,
@@ -459,9 +463,9 @@
             },
             {
               "team": "Iran",
-              "predicted_pts": 3.972,
-              "predicted_gd": 0.187,
-              "predicted_gf": 1.463,
+              "predicted_pts": 3.318,
+              "predicted_gd": -1.422,
+              "predicted_gf": 3.28,
               "matches_used": 10,
               "neutral_matches_used": 4,
               "sparse_data_flag": false,
@@ -469,9 +473,9 @@
             },
             {
               "team": "Nigeria",
-              "predicted_pts": 2.985,
-              "predicted_gd": -1.468,
-              "predicted_gf": 1.643,
+              "predicted_pts": 3.164,
+              "predicted_gd": -1.672,
+              "predicted_gf": 3.173,
               "matches_used": 10,
               "neutral_matches_used": 3,
               "sparse_data_flag": false,
@@ -479,9 +483,9 @@
             },
             {
               "team": "Bosnia and Herzegovina",
-              "predicted_pts": 2.027,
-              "predicted_gd": -2.654,
-              "predicted_gf": 1.009,
+              "predicted_pts": 2.973,
+              "predicted_gd": -1.988,
+              "predicted_gf": 3.042,
               "matches_used": 10,
               "neutral_matches_used": 4,
               "sparse_data_flag": false,
@@ -523,7 +527,7 @@
             "top2_overlap": 1,
             "winner_correct": true,
             "rank_correct": 1,
-            "points_corr": 0.7720016267010437
+            "points_corr": 0.9129852190212718
           }
         },
         {
@@ -531,9 +535,9 @@
           "predicted": [
             {
               "team": "Germany",
-              "predicted_pts": 7.144,
-              "predicted_gd": 4.58,
-              "predicted_gf": 6.145,
+              "predicted_pts": 6.239,
+              "predicted_gd": 3.31,
+              "predicted_gf": 5.819,
               "matches_used": 10,
               "neutral_matches_used": 0,
               "sparse_data_flag": false,
@@ -541,31 +545,31 @@
             },
             {
               "team": "Portugal",
-              "predicted_pts": 4.673,
-              "predicted_gd": 0.676,
-              "predicted_gf": 4.18,
+              "predicted_pts": 4.757,
+              "predicted_gd": 0.973,
+              "predicted_gf": 4.414,
               "matches_used": 10,
               "neutral_matches_used": 3,
               "sparse_data_flag": false,
               "predicted_rank": 2
             },
             {
-              "team": "Ghana",
-              "predicted_pts": 2.744,
-              "predicted_gd": -2.169,
-              "predicted_gf": 2.28,
+              "team": "United States",
+              "predicted_pts": 3.856,
+              "predicted_gd": -0.404,
+              "predicted_gf": 3.707,
               "matches_used": 10,
-              "neutral_matches_used": 2,
+              "neutral_matches_used": 1,
               "sparse_data_flag": false,
               "predicted_rank": 3
             },
             {
-              "team": "United States",
-              "predicted_pts": 2.084,
-              "predicted_gd": -3.087,
-              "predicted_gf": 1.74,
+              "team": "Ghana",
+              "predicted_pts": 1.811,
+              "predicted_gd": -3.879,
+              "predicted_gf": 2.318,
               "matches_used": 10,
-              "neutral_matches_used": 1,
+              "neutral_matches_used": 2,
               "sparse_data_flag": false,
               "predicted_rank": 4
             }
@@ -604,8 +608,8 @@
             "qualification_exact": false,
             "top2_overlap": 1,
             "winner_correct": true,
-            "rank_correct": 1,
-            "points_corr": 0.7907161882536917
+            "rank_correct": 2,
+            "points_corr": 0.9761389196560212
           }
         },
         {
@@ -613,9 +617,9 @@
           "predicted": [
             {
               "team": "Russia",
-              "predicted_pts": 6.275,
-              "predicted_gd": 3.741,
-              "predicted_gf": 5.296,
+              "predicted_pts": 5.499,
+              "predicted_gd": 2.03,
+              "predicted_gf": 4.94,
               "matches_used": 10,
               "neutral_matches_used": 2,
               "sparse_data_flag": false,
@@ -623,31 +627,31 @@
             },
             {
               "team": "Belgium",
-              "predicted_pts": 5.195,
-              "predicted_gd": 2.089,
-              "predicted_gf": 4.367,
+              "predicted_pts": 5.046,
+              "predicted_gd": 1.36,
+              "predicted_gf": 4.55,
               "matches_used": 10,
               "neutral_matches_used": 0,
               "sparse_data_flag": false,
               "predicted_rank": 2
             },
             {
-              "team": "Algeria",
-              "predicted_pts": 4.834,
-              "predicted_gd": 1.552,
-              "predicted_gf": 4.153,
+              "team": "South Korea",
+              "predicted_pts": 3.386,
+              "predicted_gd": -1.078,
+              "predicted_gf": 3.315,
               "matches_used": 10,
-              "neutral_matches_used": 2,
+              "neutral_matches_used": 4,
               "sparse_data_flag": false,
               "predicted_rank": 3
             },
             {
-              "team": "South Korea",
-              "predicted_pts": 0.48,
-              "predicted_gd": -7.382,
-              "predicted_gf": 0.779,
+              "team": "Algeria",
+              "predicted_pts": 2.599,
+              "predicted_gd": -2.312,
+              "predicted_gf": 2.799,
               "matches_used": 10,
-              "neutral_matches_used": 4,
+              "neutral_matches_used": 2,
               "sparse_data_flag": false,
               "predicted_rank": 4
             }
@@ -686,8 +690,8 @@
             "qualification_exact": false,
             "top2_overlap": 1,
             "winner_correct": false,
-            "rank_correct": 1,
-            "points_corr": 0.4398747787959602
+            "rank_correct": 0,
+            "points_corr": 0.2790108730946134
           }
         }
       ]
@@ -697,17 +701,17 @@
       "qualification_accuracy_groups": 5,
       "top2_overlap_avg": 1.625,
       "winners_correct": 5,
-      "rank_accuracy": 0.594,
-      "points_correlation": 0.516,
+      "rank_accuracy": 0.531,
+      "points_correlation": 0.641,
       "groups": [
         {
           "group": "A",
           "predicted": [
             {
               "team": "Uruguay",
-              "predicted_pts": 6.392,
-              "predicted_gd": 2.911,
-              "predicted_gf": 3.969,
+              "predicted_pts": 6.462,
+              "predicted_gd": 3.575,
+              "predicted_gf": 5.963,
               "matches_used": 10,
               "neutral_matches_used": 3,
               "sparse_data_flag": false,
@@ -715,31 +719,31 @@
             },
             {
               "team": "Russia",
-              "predicted_pts": 3.675,
-              "predicted_gd": -0.575,
-              "predicted_gf": 2.371,
+              "predicted_pts": 4.247,
+              "predicted_gd": 0.153,
+              "predicted_gf": 3.95,
               "matches_used": 10,
               "neutral_matches_used": 0,
               "sparse_data_flag": false,
               "predicted_rank": 2
             },
             {
-              "team": "Saudi Arabia",
-              "predicted_pts": 3.204,
-              "predicted_gd": -1.048,
-              "predicted_gf": 1.873,
+              "team": "Egypt",
+              "predicted_pts": 3.461,
+              "predicted_gd": -1.038,
+              "predicted_gf": 3.38,
               "matches_used": 10,
-              "neutral_matches_used": 6,
+              "neutral_matches_used": 3,
               "sparse_data_flag": false,
               "predicted_rank": 3
             },
             {
-              "team": "Egypt",
-              "predicted_pts": 2.667,
-              "predicted_gd": -1.289,
-              "predicted_gf": 1.043,
+              "team": "Saudi Arabia",
+              "predicted_pts": 2.442,
+              "predicted_gd": -2.691,
+              "predicted_gf": 2.701,
               "matches_used": 10,
-              "neutral_matches_used": 3,
+              "neutral_matches_used": 6,
               "sparse_data_flag": false,
               "predicted_rank": 4
             }
@@ -778,8 +782,8 @@
             "qualification_exact": true,
             "top2_overlap": 2,
             "winner_correct": true,
-            "rank_correct": 4,
-            "points_corr": 0.9073642361683371
+            "rank_correct": 2,
+            "points_corr": 0.8171620193901086
           }
         },
         {
@@ -787,41 +791,41 @@
           "predicted": [
             {
               "team": "Spain",
-              "predicted_pts": 7.342,
-              "predicted_gd": 4.898,
-              "predicted_gf": 5.857,
+              "predicted_pts": 6.774,
+              "predicted_gd": 4.255,
+              "predicted_gf": 6.487,
               "matches_used": 10,
               "neutral_matches_used": 1,
               "sparse_data_flag": false,
               "predicted_rank": 1
             },
             {
-              "team": "Iran",
-              "predicted_pts": 3.722,
-              "predicted_gd": -0.377,
-              "predicted_gf": 1.981,
+              "team": "Portugal",
+              "predicted_pts": 4.727,
+              "predicted_gd": 0.877,
+              "predicted_gf": 4.397,
               "matches_used": 10,
-              "neutral_matches_used": 4,
+              "neutral_matches_used": 2,
               "sparse_data_flag": false,
               "predicted_rank": 2
             },
             {
-              "team": "Morocco",
-              "predicted_pts": 3.03,
-              "predicted_gd": -1.519,
-              "predicted_gf": 1.911,
+              "team": "Iran",
+              "predicted_pts": 3.155,
+              "predicted_gd": -1.604,
+              "predicted_gf": 3.2,
               "matches_used": 10,
               "neutral_matches_used": 4,
               "sparse_data_flag": false,
               "predicted_rank": 3
             },
             {
-              "team": "Portugal",
-              "predicted_pts": 2.244,
-              "predicted_gd": -3.002,
-              "predicted_gf": 1.611,
+              "team": "Morocco",
+              "predicted_pts": 2.062,
+              "predicted_gd": -3.527,
+              "predicted_gf": 2.468,
               "matches_used": 10,
-              "neutral_matches_used": 2,
+              "neutral_matches_used": 4,
               "sparse_data_flag": false,
               "predicted_rank": 4
             }
@@ -857,41 +861,41 @@
             }
           ],
           "metrics": {
-            "qualification_exact": false,
-            "top2_overlap": 1,
+            "qualification_exact": true,
+            "top2_overlap": 2,
             "winner_correct": true,
-            "rank_correct": 1,
-            "points_corr": 0.35783756044649584
+            "rank_correct": 4,
+            "points_corr": 0.8169465707356152
           }
         },
         {
           "group": "C",
           "predicted": [
             {
-              "team": "Peru",
-              "predicted_pts": 5.583,
-              "predicted_gd": 1.815,
-              "predicted_gf": 2.925,
+              "team": "France",
+              "predicted_pts": 6.482,
+              "predicted_gd": 3.631,
+              "predicted_gf": 6.011,
               "matches_used": 10,
-              "neutral_matches_used": 3,
+              "neutral_matches_used": 0,
               "sparse_data_flag": false,
               "predicted_rank": 1
             },
             {
-              "team": "France",
-              "predicted_pts": 4.351,
-              "predicted_gd": 0.432,
-              "predicted_gf": 2.464,
+              "team": "Peru",
+              "predicted_pts": 4.575,
+              "predicted_gd": 0.643,
+              "predicted_gf": 4.216,
               "matches_used": 10,
-              "neutral_matches_used": 0,
+              "neutral_matches_used": 3,
               "sparse_data_flag": false,
               "predicted_rank": 2
             },
             {
               "team": "Denmark",
-              "predicted_pts": 2.918,
-              "predicted_gd": -0.986,
-              "predicted_gf": 1.153,
+              "predicted_pts": 3.085,
+              "predicted_gd": -1.644,
+              "predicted_gf": 3.128,
               "matches_used": 10,
               "neutral_matches_used": 1,
               "sparse_data_flag": false,
@@ -899,9 +903,9 @@
             },
             {
               "team": "Australia",
-              "predicted_pts": 2.852,
-              "predicted_gd": -1.261,
-              "predicted_gf": 1.39,
+              "predicted_pts": 2.49,
+              "predicted_gd": -2.63,
+              "predicted_gf": 2.735,
               "matches_used": 10,
               "neutral_matches_used": 3,
               "sparse_data_flag": false,
@@ -941,9 +945,9 @@
           "metrics": {
             "qualification_exact": false,
             "top2_overlap": 1,
-            "winner_correct": false,
-            "rank_correct": 1,
-            "points_corr": 0.18146951882854281
+            "winner_correct": true,
+            "rank_correct": 2,
+            "points_corr": 0.7603975743173255
           }
         },
         {
@@ -951,9 +955,9 @@
           "predicted": [
             {
               "team": "Argentina",
-              "predicted_pts": 7.734,
-              "predicted_gd": 7.357,
-              "predicted_gf": 9.306,
+              "predicted_pts": 7.027,
+              "predicted_gd": 4.821,
+              "predicted_gf": 6.925,
               "matches_used": 10,
               "neutral_matches_used": 2,
               "sparse_data_flag": false,
@@ -961,9 +965,9 @@
             },
             {
               "team": "Croatia",
-              "predicted_pts": 3.631,
-              "predicted_gd": -0.697,
-              "predicted_gf": 2.414,
+              "predicted_pts": 4.959,
+              "predicted_gd": 1.227,
+              "predicted_gf": 4.636,
               "matches_used": 10,
               "neutral_matches_used": 3,
               "sparse_data_flag": false,
@@ -971,9 +975,9 @@
             },
             {
               "team": "Nigeria",
-              "predicted_pts": 3.323,
-              "predicted_gd": -1.768,
-              "predicted_gf": 3.241,
+              "predicted_pts": 2.403,
+              "predicted_gd": -3.018,
+              "predicted_gf": 2.691,
               "matches_used": 10,
               "neutral_matches_used": 3,
               "sparse_data_flag": false,
@@ -981,9 +985,9 @@
             },
             {
               "team": "Iceland",
-              "predicted_pts": 2.026,
-              "predicted_gd": -4.892,
-              "predicted_gf": 2.568,
+              "predicted_pts": 2.397,
+              "predicted_gd": -3.029,
+              "predicted_gf": 2.686,
               "matches_used": 10,
               "neutral_matches_used": 3,
               "sparse_data_flag": false,
@@ -1025,7 +1029,7 @@
             "top2_overlap": 2,
             "winner_correct": false,
             "rank_correct": 2,
-            "points_corr": 0.18140899423326975
+            "points_corr": 0.4812312504781328
           }
         },
         {
@@ -1033,9 +1037,9 @@
           "predicted": [
             {
               "team": "Brazil",
-              "predicted_pts": 7.627,
-              "predicted_gd": 6.992,
-              "predicted_gf": 7.648,
+              "predicted_pts": 8.101,
+              "predicted_gd": 7.886,
+              "predicted_gf": 9.413,
               "matches_used": 10,
               "neutral_matches_used": 2,
               "sparse_data_flag": false,
@@ -1043,31 +1047,31 @@
             },
             {
               "team": "Switzerland",
-              "predicted_pts": 5.707,
-              "predicted_gd": 2.95,
-              "predicted_gf": 4.642,
+              "predicted_pts": 4.238,
+              "predicted_gd": -0.241,
+              "predicted_gf": 4.075,
               "matches_used": 10,
               "neutral_matches_used": 0,
               "sparse_data_flag": false,
               "predicted_rank": 2
             },
             {
-              "team": "Serbia",
-              "predicted_pts": 3.129,
-              "predicted_gd": -1.97,
-              "predicted_gf": 2.601,
+              "team": "Costa Rica",
+              "predicted_pts": 2.357,
+              "predicted_gd": -3.747,
+              "predicted_gf": 2.632,
               "matches_used": 10,
-              "neutral_matches_used": 4,
+              "neutral_matches_used": 1,
               "sparse_data_flag": false,
               "predicted_rank": 3
             },
             {
-              "team": "Costa Rica",
-              "predicted_pts": 0.547,
-              "predicted_gd": -7.972,
-              "predicted_gf": 0.622,
+              "team": "Serbia",
+              "predicted_pts": 2.284,
+              "predicted_gd": -3.898,
+              "predicted_gf": 2.582,
               "matches_used": 10,
-              "neutral_matches_used": 1,
+              "neutral_matches_used": 4,
               "sparse_data_flag": false,
               "predicted_rank": 4
             }
@@ -1106,8 +1110,8 @@
             "qualification_exact": true,
             "top2_overlap": 2,
             "winner_correct": true,
-            "rank_correct": 4,
-            "points_corr": 0.9976997036784256
+            "rank_correct": 2,
+            "points_corr": 0.9089145538888267
           }
         },
         {
@@ -1115,9 +1119,9 @@
           "predicted": [
             {
               "team": "Germany",
-              "predicted_pts": 5.837,
-              "predicted_gd": 2.392,
-              "predicted_gf": 3.67,
+              "predicted_pts": 6.896,
+              "predicted_gd": 4.452,
+              "predicted_gf": 6.621,
               "matches_used": 10,
               "neutral_matches_used": 0,
               "sparse_data_flag": false,
@@ -1125,9 +1129,9 @@
             },
             {
               "team": "Mexico",
-              "predicted_pts": 4.367,
-              "predicted_gd": 0.534,
-              "predicted_gf": 1.641,
+              "predicted_pts": 4.51,
+              "predicted_gd": 0.518,
+              "predicted_gf": 4.203,
               "matches_used": 10,
               "neutral_matches_used": 4,
               "sparse_data_flag": false,
@@ -1135,9 +1139,9 @@
             },
             {
               "team": "Sweden",
-              "predicted_pts": 3.384,
-              "predicted_gd": -0.538,
-              "predicted_gf": 1.308,
+              "predicted_pts": 3.049,
+              "predicted_gd": -1.796,
+              "predicted_gf": 3.117,
               "matches_used": 10,
               "neutral_matches_used": 2,
               "sparse_data_flag": false,
@@ -1145,9 +1149,9 @@
             },
             {
               "team": "South Korea",
-              "predicted_pts": 1.954,
-              "predicted_gd": -2.388,
-              "predicted_gf": 0.71,
+              "predicted_pts": 2.257,
+              "predicted_gd": -3.174,
+              "predicted_gf": 2.588,
               "matches_used": 10,
               "neutral_matches_used": 5,
               "sparse_data_flag": false,
@@ -1189,27 +1193,27 @@
             "top2_overlap": 1,
             "winner_correct": false,
             "rank_correct": 1,
-            "points_corr": -0.007061193898496825
+            "points_corr": -0.22576336552467513
           }
         },
         {
           "group": "G",
           "predicted": [
             {
-              "team": "Belgium",
-              "predicted_pts": 7.152,
-              "predicted_gd": 7.504,
-              "predicted_gf": 8.898,
+              "team": "England",
+              "predicted_pts": 6.534,
+              "predicted_gd": 4.142,
+              "predicted_gf": 6.534,
               "matches_used": 10,
               "neutral_matches_used": 0,
               "sparse_data_flag": false,
               "predicted_rank": 1
             },
             {
-              "team": "England",
-              "predicted_pts": 6.301,
-              "predicted_gd": 3.44,
-              "predicted_gf": 4.593,
+              "team": "Belgium",
+              "predicted_pts": 6.259,
+              "predicted_gd": 3.619,
+              "predicted_gf": 6.183,
               "matches_used": 10,
               "neutral_matches_used": 0,
               "sparse_data_flag": false,
@@ -1217,9 +1221,9 @@
             },
             {
               "team": "Tunisia",
-              "predicted_pts": 2.532,
-              "predicted_gd": -3.166,
-              "predicted_gf": 1.905,
+              "predicted_pts": 2.323,
+              "predicted_gd": -3.324,
+              "predicted_gf": 2.666,
               "matches_used": 10,
               "neutral_matches_used": 3,
               "sparse_data_flag": false,
@@ -1227,9 +1231,9 @@
             },
             {
               "team": "Panama",
-              "predicted_pts": 0.908,
-              "predicted_gd": -7.779,
-              "predicted_gf": 0.996,
+              "predicted_pts": 1.791,
+              "predicted_gd": -4.437,
+              "predicted_gf": 2.3,
               "matches_used": 10,
               "neutral_matches_used": 1,
               "sparse_data_flag": false,
@@ -1269,9 +1273,9 @@
           "metrics": {
             "qualification_exact": true,
             "top2_overlap": 2,
-            "winner_correct": true,
-            "rank_correct": 4,
-            "points_corr": 0.9728788807107914
+            "winner_correct": false,
+            "rank_correct": 2,
+            "points_corr": 0.90337883602607
           }
         },
         {
@@ -1279,41 +1283,41 @@
           "predicted": [
             {
               "team": "Colombia",
-              "predicted_pts": 6.134,
-              "predicted_gd": 2.987,
-              "predicted_gf": 3.987,
+              "predicted_pts": 5.757,
+              "predicted_gd": 2.386,
+              "predicted_gf": 5.139,
               "matches_used": 10,
               "neutral_matches_used": 3,
               "sparse_data_flag": false,
               "predicted_rank": 1
             },
             {
-              "team": "Senegal",
-              "predicted_pts": 4.342,
-              "predicted_gd": 0.662,
-              "predicted_gf": 2.281,
+              "team": "Poland",
+              "predicted_pts": 4.34,
+              "predicted_gd": 0.322,
+              "predicted_gf": 3.971,
               "matches_used": 10,
-              "neutral_matches_used": 3,
+              "neutral_matches_used": 0,
               "sparse_data_flag": false,
               "predicted_rank": 2
             },
             {
-              "team": "Poland",
-              "predicted_pts": 4.292,
-              "predicted_gd": 0.9,
-              "predicted_gf": 4.141,
+              "team": "Japan",
+              "predicted_pts": 3.242,
+              "predicted_gd": -1.289,
+              "predicted_gf": 3.204,
               "matches_used": 10,
-              "neutral_matches_used": 0,
+              "neutral_matches_used": 4,
               "sparse_data_flag": false,
               "predicted_rank": 3
             },
             {
-              "team": "Japan",
-              "predicted_pts": 1.438,
-              "predicted_gd": -4.549,
-              "predicted_gf": 1.929,
+              "team": "Senegal",
+              "predicted_pts": 3.157,
+              "predicted_gd": -1.418,
+              "predicted_gf": 3.148,
               "matches_used": 10,
-              "neutral_matches_used": 4,
+              "neutral_matches_used": 3,
               "sparse_data_flag": false,
               "predicted_rank": 4
             }
@@ -1349,61 +1353,61 @@
             }
           ],
           "metrics": {
-            "qualification_exact": true,
-            "top2_overlap": 2,
+            "qualification_exact": false,
+            "top2_overlap": 1,
             "winner_correct": true,
             "rank_correct": 2,
-            "points_corr": 0.5354480994379238
+            "points_corr": 0.6651655776173355
           }
         }
       ]
     },
     {
       "year": 2022,
-      "qualification_accuracy_groups": 1,
-      "top2_overlap_avg": 1.125,
-      "winners_correct": 7,
-      "rank_accuracy": 0.469,
-      "points_correlation": 0.554,
+      "qualification_accuracy_groups": 2,
+      "top2_overlap_avg": 1.25,
+      "winners_correct": 6,
+      "rank_accuracy": 0.5,
+      "points_correlation": 0.522,
       "groups": [
         {
           "group": "A",
           "predicted": [
             {
               "team": "Netherlands",
-              "predicted_pts": 6.862,
-              "predicted_gd": 4.241,
-              "predicted_gf": 5.531,
+              "predicted_pts": 7.305,
+              "predicted_gd": 5.276,
+              "predicted_gf": 7.238,
               "matches_used": 10,
               "neutral_matches_used": 0,
               "sparse_data_flag": false,
               "predicted_rank": 1
             },
             {
-              "team": "Qatar",
-              "predicted_pts": 3.169,
-              "predicted_gd": -1.252,
-              "predicted_gf": 1.736,
+              "team": "Ecuador",
+              "predicted_pts": 4.017,
+              "predicted_gd": -0.325,
+              "predicted_gf": 3.812,
               "matches_used": 10,
               "neutral_matches_used": 6,
               "sparse_data_flag": false,
               "predicted_rank": 2
             },
             {
-              "team": "Ecuador",
-              "predicted_pts": 3.052,
-              "predicted_gd": -0.638,
-              "predicted_gf": 0.766,
+              "team": "Senegal",
+              "predicted_pts": 2.931,
+              "predicted_gd": -2.098,
+              "predicted_gf": 3.027,
               "matches_used": 10,
               "neutral_matches_used": 6,
               "sparse_data_flag": false,
               "predicted_rank": 3
             },
             {
-              "team": "Senegal",
-              "predicted_pts": 2.619,
-              "predicted_gd": -2.351,
-              "predicted_gf": 1.583,
+              "team": "Qatar",
+              "predicted_pts": 2.5,
+              "predicted_gd": -2.853,
+              "predicted_gf": 2.736,
               "matches_used": 10,
               "neutral_matches_used": 6,
               "sparse_data_flag": false,
@@ -1445,7 +1449,7 @@
             "top2_overlap": 1,
             "winner_correct": true,
             "rank_correct": 2,
-            "points_corr": 0.5035961025824668
+            "points_corr": 0.6731462418974875
           }
         },
         {
@@ -1453,9 +1457,9 @@
           "predicted": [
             {
               "team": "England",
-              "predicted_pts": 6.867,
-              "predicted_gd": 4.469,
-              "predicted_gf": 6.22,
+              "predicted_pts": 6.052,
+              "predicted_gd": 2.87,
+              "predicted_gf": 5.468,
               "matches_used": 10,
               "neutral_matches_used": 0,
               "sparse_data_flag": false,
@@ -1463,9 +1467,9 @@
             },
             {
               "team": "United States",
-              "predicted_pts": 3.922,
-              "predicted_gd": -0.169,
-              "predicted_gf": 2.232,
+              "predicted_pts": 3.995,
+              "predicted_gd": -0.19,
+              "predicted_gf": 3.74,
               "matches_used": 10,
               "neutral_matches_used": 2,
               "sparse_data_flag": false,
@@ -1473,9 +1477,9 @@
             },
             {
               "team": "Iran",
-              "predicted_pts": 3.667,
-              "predicted_gd": -0.629,
-              "predicted_gf": 2.434,
+              "predicted_pts": 3.955,
+              "predicted_gd": -0.249,
+              "predicted_gf": 3.711,
               "matches_used": 10,
               "neutral_matches_used": 5,
               "sparse_data_flag": false,
@@ -1483,9 +1487,9 @@
             },
             {
               "team": "Wales",
-              "predicted_pts": 1.881,
-              "predicted_gd": -3.671,
-              "predicted_gf": 1.556,
+              "predicted_pts": 2.545,
+              "predicted_gd": -2.43,
+              "predicted_gf": 2.763,
               "matches_used": 10,
               "neutral_matches_used": 0,
               "sparse_data_flag": false,
@@ -1527,7 +1531,7 @@
             "top2_overlap": 2,
             "winner_correct": true,
             "rank_correct": 4,
-            "points_corr": 0.9508707890516471
+            "points_corr": 0.9442286960096238
           }
         },
         {
@@ -1535,9 +1539,9 @@
           "predicted": [
             {
               "team": "Argentina",
-              "predicted_pts": 8.557,
-              "predicted_gd": 10.456,
-              "predicted_gf": 10.875,
+              "predicted_pts": 7.761,
+              "predicted_gd": 6.678,
+              "predicted_gf": 8.395,
               "matches_used": 10,
               "neutral_matches_used": 4,
               "sparse_data_flag": false,
@@ -1545,9 +1549,9 @@
             },
             {
               "team": "Mexico",
-              "predicted_pts": 3.049,
-              "predicted_gd": -3.42,
-              "predicted_gf": 1.803,
+              "predicted_pts": 3.733,
+              "predicted_gd": -0.926,
+              "predicted_gf": 3.658,
               "matches_used": 10,
               "neutral_matches_used": 8,
               "sparse_data_flag": false,
@@ -1555,9 +1559,9 @@
             },
             {
               "team": "Poland",
-              "predicted_pts": 2.397,
-              "predicted_gd": -5.002,
-              "predicted_gf": 1.399,
+              "predicted_pts": 3.67,
+              "predicted_gd": -1.033,
+              "predicted_gf": 3.609,
               "matches_used": 10,
               "neutral_matches_used": 0,
               "sparse_data_flag": false,
@@ -1565,9 +1569,9 @@
             },
             {
               "team": "Saudi Arabia",
-              "predicted_pts": 2.388,
-              "predicted_gd": -2.034,
-              "predicted_gf": 0.653,
+              "predicted_pts": 1.736,
+              "predicted_gd": -4.719,
+              "predicted_gf": 2.236,
               "matches_used": 10,
               "neutral_matches_used": 9,
               "sparse_data_flag": false,
@@ -1609,7 +1613,7 @@
             "top2_overlap": 1,
             "winner_correct": true,
             "rank_correct": 2,
-            "points_corr": 0.9419825071581368
+            "points_corr": 0.9999032960899882
           }
         },
         {
@@ -1617,9 +1621,9 @@
           "predicted": [
             {
               "team": "France",
-              "predicted_pts": 7.727,
-              "predicted_gd": 6.244,
-              "predicted_gf": 7.486,
+              "predicted_pts": 6.434,
+              "predicted_gd": 3.653,
+              "predicted_gf": 6.069,
               "matches_used": 10,
               "neutral_matches_used": 1,
               "sparse_data_flag": false,
@@ -1627,9 +1631,9 @@
             },
             {
               "team": "Denmark",
-              "predicted_pts": 4.141,
-              "predicted_gd": -0.3,
-              "predicted_gf": 3.402,
+              "predicted_pts": 5.268,
+              "predicted_gd": 1.739,
+              "predicted_gf": 4.872,
               "matches_used": 10,
               "neutral_matches_used": 0,
               "sparse_data_flag": false,
@@ -1637,9 +1641,9 @@
             },
             {
               "team": "Australia",
-              "predicted_pts": 3.209,
-              "predicted_gd": -1.364,
-              "predicted_gf": 2.109,
+              "predicted_pts": 2.829,
+              "predicted_gd": -2.118,
+              "predicted_gf": 2.978,
               "matches_used": 10,
               "neutral_matches_used": 4,
               "sparse_data_flag": false,
@@ -1647,9 +1651,9 @@
             },
             {
               "team": "Tunisia",
-              "predicted_pts": 1.621,
-              "predicted_gd": -4.579,
-              "predicted_gf": 1.464,
+              "predicted_pts": 2.177,
+              "predicted_gd": -3.274,
+              "predicted_gf": 2.545,
               "matches_used": 10,
               "neutral_matches_used": 5,
               "sparse_data_flag": false,
@@ -1691,7 +1695,7 @@
             "top2_overlap": 1,
             "winner_correct": true,
             "rank_correct": 1,
-            "points_corr": 0.2876455617745787
+            "points_corr": -0.10219676988838965
           }
         },
         {
@@ -1699,9 +1703,9 @@
           "predicted": [
             {
               "team": "Spain",
-              "predicted_pts": 5.871,
-              "predicted_gd": 2.265,
-              "predicted_gf": 3.801,
+              "predicted_pts": 6.488,
+              "predicted_gd": 3.865,
+              "predicted_gf": 6.251,
               "matches_used": 10,
               "neutral_matches_used": 0,
               "sparse_data_flag": false,
@@ -1709,9 +1713,9 @@
             },
             {
               "team": "Germany",
-              "predicted_pts": 3.98,
-              "predicted_gd": -0.153,
-              "predicted_gf": 2.771,
+              "predicted_pts": 5.307,
+              "predicted_gd": 1.872,
+              "predicted_gf": 4.992,
               "matches_used": 10,
               "neutral_matches_used": 0,
               "sparse_data_flag": false,
@@ -1719,9 +1723,9 @@
             },
             {
               "team": "Japan",
-              "predicted_pts": 3.183,
-              "predicted_gd": -0.961,
-              "predicted_gf": 1.812,
+              "predicted_pts": 3.372,
+              "predicted_gd": -1.229,
+              "predicted_gf": 3.395,
               "matches_used": 10,
               "neutral_matches_used": 3,
               "sparse_data_flag": false,
@@ -1729,9 +1733,9 @@
             },
             {
               "team": "Costa Rica",
-              "predicted_pts": 2.974,
-              "predicted_gd": -1.151,
-              "predicted_gf": 1.593,
+              "predicted_pts": 1.599,
+              "predicted_gd": -4.508,
+              "predicted_gf": 2.184,
               "matches_used": 10,
               "neutral_matches_used": 2,
               "sparse_data_flag": false,
@@ -1773,47 +1777,47 @@
             "top2_overlap": 1,
             "winner_correct": false,
             "rank_correct": 1,
-            "points_corr": -0.12248933629137666
+            "points_corr": 0.11729957807071739
           }
         },
         {
           "group": "F",
           "predicted": [
             {
-              "team": "Morocco",
-              "predicted_pts": 4.684,
-              "predicted_gd": 0.827,
-              "predicted_gf": 2.79,
+              "team": "Belgium",
+              "predicted_pts": 6.341,
+              "predicted_gd": 3.364,
+              "predicted_gf": 5.816,
               "matches_used": 10,
-              "neutral_matches_used": 5,
+              "neutral_matches_used": 1,
               "sparse_data_flag": false,
               "predicted_rank": 1
             },
             {
-              "team": "Belgium",
-              "predicted_pts": 4.355,
-              "predicted_gd": 0.425,
-              "predicted_gf": 3.368,
+              "team": "Croatia",
+              "predicted_pts": 4.495,
+              "predicted_gd": 0.527,
+              "predicted_gf": 4.135,
               "matches_used": 10,
-              "neutral_matches_used": 1,
+              "neutral_matches_used": 2,
               "sparse_data_flag": false,
               "predicted_rank": 2
             },
             {
-              "team": "Croatia",
-              "predicted_pts": 4.067,
-              "predicted_gd": 0.104,
-              "predicted_gf": 2.609,
+              "team": "Morocco",
+              "predicted_pts": 3.131,
+              "predicted_gd": -1.542,
+              "predicted_gf": 3.151,
               "matches_used": 10,
-              "neutral_matches_used": 2,
+              "neutral_matches_used": 5,
               "sparse_data_flag": false,
               "predicted_rank": 3
             },
             {
               "team": "Canada",
-              "predicted_pts": 2.934,
-              "predicted_gd": -1.356,
-              "predicted_gf": 2.085,
+              "predicted_pts": 2.632,
+              "predicted_gd": -2.35,
+              "predicted_gf": 2.822,
               "matches_used": 10,
               "neutral_matches_used": 3,
               "sparse_data_flag": false,
@@ -1853,9 +1857,9 @@
           "metrics": {
             "qualification_exact": false,
             "top2_overlap": 1,
-            "winner_correct": true,
+            "winner_correct": false,
             "rank_correct": 2,
-            "points_corr": 0.9505452654715029
+            "points_corr": 0.22924770399041225
           }
         },
         {
@@ -1863,39 +1867,39 @@
           "predicted": [
             {
               "team": "Brazil",
-              "predicted_pts": 8.813,
-              "predicted_gd": 12.769,
-              "predicted_gf": 13.296,
+              "predicted_pts": 8.09,
+              "predicted_gd": 8.294,
+              "predicted_gf": 9.803,
               "matches_used": 10,
               "neutral_matches_used": 2,
               "sparse_data_flag": false,
               "predicted_rank": 1
             },
             {
-              "team": "Serbia",
-              "predicted_pts": 4.762,
-              "predicted_gd": -0.44,
-              "predicted_gf": 4.052,
+              "team": "Switzerland",
+              "predicted_pts": 4.003,
+              "predicted_gd": -0.597,
+              "predicted_gf": 3.993,
               "matches_used": 10,
-              "neutral_matches_used": 0,
+              "neutral_matches_used": 1,
               "sparse_data_flag": false,
               "predicted_rank": 2
             },
             {
-              "team": "Switzerland",
-              "predicted_pts": 2.157,
-              "predicted_gd": -5.747,
-              "predicted_gf": 1.611,
+              "team": "Serbia",
+              "predicted_pts": 3.771,
+              "predicted_gd": -1.032,
+              "predicted_gf": 3.792,
               "matches_used": 10,
-              "neutral_matches_used": 1,
+              "neutral_matches_used": 0,
               "sparse_data_flag": false,
               "predicted_rank": 3
             },
             {
               "team": "Cameroon",
-              "predicted_pts": 1.416,
-              "predicted_gd": -6.582,
-              "predicted_gf": 0.961,
+              "predicted_pts": 1.2,
+              "predicted_gd": -6.665,
+              "predicted_gf": 1.867,
               "matches_used": 10,
               "neutral_matches_used": 3,
               "sparse_data_flag": false,
@@ -1933,11 +1937,11 @@
             }
           ],
           "metrics": {
-            "qualification_exact": false,
-            "top2_overlap": 1,
+            "qualification_exact": true,
+            "top2_overlap": 2,
             "winner_correct": true,
-            "rank_correct": 1,
-            "points_corr": 0.1421605717252764
+            "rank_correct": 2,
+            "points_corr": 0.4262910189080013
           }
         },
         {
@@ -1945,9 +1949,9 @@
           "predicted": [
             {
               "team": "Portugal",
-              "predicted_pts": 5.986,
-              "predicted_gd": 3.327,
-              "predicted_gf": 4.754,
+              "predicted_pts": 6.453,
+              "predicted_gd": 3.992,
+              "predicted_gf": 6.387,
               "matches_used": 10,
               "neutral_matches_used": 0,
               "sparse_data_flag": false,
@@ -1955,9 +1959,9 @@
             },
             {
               "team": "Uruguay",
-              "predicted_pts": 5.533,
-              "predicted_gd": 2.201,
-              "predicted_gf": 3.489,
+              "predicted_pts": 5.13,
+              "predicted_gd": 1.709,
+              "predicted_gf": 4.95,
               "matches_used": 10,
               "neutral_matches_used": 3,
               "sparse_data_flag": false,
@@ -1965,9 +1969,9 @@
             },
             {
               "team": "South Korea",
-              "predicted_pts": 4.476,
-              "predicted_gd": 1.079,
-              "predicted_gf": 3.651,
+              "predicted_pts": 4.127,
+              "predicted_gd": 0.066,
+              "predicted_gf": 4.06,
               "matches_used": 10,
               "neutral_matches_used": 2,
               "sparse_data_flag": false,
@@ -1975,9 +1979,9 @@
             },
             {
               "team": "Ghana",
-              "predicted_pts": 0.57,
-              "predicted_gd": -6.607,
-              "predicted_gf": 0.688,
+              "predicted_pts": 1.114,
+              "predicted_gd": -5.766,
+              "predicted_gf": 1.88,
               "matches_used": 10,
               "neutral_matches_used": 6,
               "sparse_data_flag": false,
@@ -2019,7 +2023,7 @@
             "top2_overlap": 1,
             "winner_correct": true,
             "rank_correct": 2,
-            "points_corr": 0.7807786858784626
+            "points_corr": 0.884968954490859
           }
         }
       ]

@@ -83,9 +83,24 @@ def summarize_year(year: int, group_reports: list[dict]) -> dict:
 def train_config(results: pd.DataFrame, base_cfg: dict, years=(2014,2018,2022)) -> dict:
     best=None
     # Small grid keeps training practical while calibrating the important knobs.
-    grid = product([10, 20, 40], [1.0, 1.2], [0.15, 0.25], [0.0, 0.7, 1.0])
-    for N, scale, floor, elo_weight in grid:
-        cfg=deepcopy(base_cfg); cfg["N"]=N; cfg["scaling_factor"]=scale; cfg["xg_floor"]=floor; cfg["elo_weight"]=elo_weight
+    grid = product(
+        ["elo_only", "blend"],
+        [10],
+        [1.0],
+        [0.25],
+        [0.5, 0.8],
+        [800],
+        [1.25, 1.45],
+    )
+    for model_type, N, scale, floor, blend_share, elo_slope, base_xg in grid:
+        cfg=deepcopy(base_cfg)
+        cfg["model_type"]=model_type
+        cfg["N"]=N
+        cfg["scaling_factor"]=scale
+        cfg["xg_floor"]=floor
+        cfg["blend_elo_share"]=blend_share
+        cfg["elo_goal_slope"]=elo_slope
+        cfg["base_xg"]=base_xg
         reports=[validate_year(results, y, cfg) for y in years]
         score=sum(r["top2_overlap_avg"] for r in reports) + 0.15*sum(r["winners_correct"] for r in reports) + 0.5*sum(r["rank_accuracy"] for r in reports)
         cand={"score":round(score,4),"config":cfg,"reports":reports}

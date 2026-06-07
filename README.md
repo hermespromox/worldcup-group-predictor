@@ -38,11 +38,11 @@ PYTHONPATH=src python -m worldcup_predictor.cli predict-2026
 
 Current trained validation summary:
 
-- 2014: strict qualifiers 3/8, top-2 overlap 1.375/2, winners 5/8
+- 2014: strict qualifiers 2/8, top-2 overlap 1.25/2, winners 5/8
 - 2018: strict qualifiers 5/8, top-2 overlap 1.625/2, winners 5/8
-- 2022: strict qualifiers 1/8, top-2 overlap 1.125/2, winners 7/8
+- 2022: strict qualifiers 2/8, top-2 overlap 1.25/2, winners 6/8
 
-The model uses recent form + neutral goal metrics + an Elo prior computed from historical matches before the cutoff date.
+The selected model is currently `elo_only`: it uses an international Elo rating computed only from matches before each cutoff, then converts Elo differences into xG for Poisson group simulation. This performed better overall than the raw recent-goals model on top-2 overlap.
 
 ## Status
 

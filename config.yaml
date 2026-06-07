@@ -1,4 +1,5 @@
 # Tuned against 2014/2018/2022 group-stage validation.
+model_type: elo_only
 N: 10
 min_matches: 10
 form_window: 5
@@ -6,7 +7,9 @@ recency_decay: 0.9
 xg_ceiling: 5.0
 xg_floor: 0.25
 scaling_factor: 1.0
-elo_weight: 0.7
+blend_elo_share: 0.5
+elo_goal_slope: 800
+base_xg: 1.25
 neutral_blend_threshold: 5
 max_goals_simulated: 10
 match_weights:
