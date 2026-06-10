@@ -55,43 +55,46 @@ def validation_metrics(predicted: list[dict], actual: list[dict]) -> dict:
 
 
 def validate_year(results: pd.DataFrame, year: int, cfg: dict) -> dict:
-    groups=HISTORICAL_GROUPS[year]; cutoff=CUTOFFS[year]; start,end=WINDOWS[year]
-    teams=[t for ts in groups.values() for t in ts]
-    features=compute_team_features(results, teams, cutoff, cfg)
-    group_reports=[]
-    for g,ts in groups.items():
-        pred=simulate_group(g, ts, features, cfg)["standings"]
-        actual=actual_group_table(ts, actual_group_matches(results, ts, start, end))
-        group_reports.append({"group":g,"predicted":pred,"actual":actual,"metrics":validation_metrics(pred, actual)})
+    groups = HISTORICAL_GROUPS[year]
+    cutoff = CUTOFFS[year]
+    start, end = WINDOWS[year]
+    teams = [t for ts in groups.values() for t in ts]
+    features = compute_team_features(results, teams, cutoff, cfg)
+    group_reports = []
+    for g, ts in groups.items():
+        pred = simulate_group(g, ts, features, cfg)["standings"]
+        actual = actual_group_table(ts, actual_group_matches(results, ts, start, end))
+        group_reports.append({"group": g, "predicted": pred, "actual": actual, "metrics": validation_metrics(pred, actual)})
     return summarize_year(year, group_reports)
 
 
 def summarize_year(year: int, group_reports: list[dict]) -> dict:
-    n=len(group_reports)
+    n = len(group_reports)
     return {
         "year": year,
         "qualification_accuracy_groups": sum(1 for g in group_reports if g["metrics"]["qualification_exact"]),
-        "top2_overlap_avg": round(sum(g["metrics"]["top2_overlap"] for g in group_reports)/n, 3),
+        "top2_overlap_avg": round(sum(g["metrics"]["top2_overlap"] for g in group_reports) / n, 3),
         "winners_correct": sum(1 for g in group_reports if g["metrics"]["winner_correct"]),
-        "rank_accuracy": round(sum(g["metrics"]["rank_correct"] for g in group_reports)/(n*4), 3),
-        "points_correlation": round(sum(g["metrics"]["points_corr"] for g in group_reports)/n, 3),
+        "rank_accuracy": round(sum(g["metrics"]["rank_correct"] for g in group_reports) / (n * 4), 3),
+        "points_correlation": round(sum(g["metrics"]["points_corr"] for g in group_reports) / n, 3),
         "groups": group_reports,
     }
 
 
-def train_config(results: pd.DataFrame, base_cfg: dict, years=(2014,2018,2022)) -> dict:
-    best=None
+def train_config(results: pd.DataFrame, base_cfg: dict, years: tuple = (2014, 2018, 2022)) -> dict:
+    best = None
     candidates = [
-        {"elo_variant":"simple", "model_type":"elo_only", "N":10, "scaling_factor":1.0, "xg_floor":0.25, "blend_elo_share":0.5, "elo_goal_slope":800, "base_xg":1.25, "form_elo_weight":0.0},
-        {"elo_variant":"advanced", "model_type":"elo_only", "N":10, "scaling_factor":1.0, "xg_floor":0.25, "blend_elo_share":0.5, "elo_goal_slope":800, "base_xg":1.25, "form_elo_weight":0.0},
-        {"elo_variant":"advanced", "model_type":"blend", "N":10, "scaling_factor":1.0, "xg_floor":0.25, "blend_elo_share":0.8, "elo_goal_slope":650, "base_xg":1.25, "form_elo_weight":0.0},
-        {"elo_variant":"advanced", "model_type":"blend", "N":10, "scaling_factor":1.0, "xg_floor":0.25, "blend_elo_share":0.8, "elo_goal_slope":650, "base_xg":1.25, "form_elo_weight":150.0},
+        {"elo_variant": "simple", "model_type": "elo_only", "N": 10, "scaling_factor": 1.0, "xg_floor": 0.25, "blend_elo_share": 0.5, "elo_goal_slope": 800, "base_xg": 1.25, "form_elo_weight": 0.0},
+        {"elo_variant": "advanced", "model_type": "elo_only", "N": 10, "scaling_factor": 1.0, "xg_floor": 0.25, "blend_elo_share": 0.5, "elo_goal_slope": 800, "base_xg": 1.25, "form_elo_weight": 0.0},
+        {"elo_variant": "advanced", "model_type": "blend", "N": 10, "scaling_factor": 1.0, "xg_floor": 0.25, "blend_elo_share": 0.8, "elo_goal_slope": 650, "base_xg": 1.25, "form_elo_weight": 0.0},
+        {"elo_variant": "advanced", "model_type": "blend", "N": 10, "scaling_factor": 1.0, "xg_floor": 0.25, "blend_elo_share": 0.8, "elo_goal_slope": 650, "base_xg": 1.25, "form_elo_weight": 150.0},
     ]
     for params in candidates:
-        cfg=deepcopy(base_cfg)
+        cfg = deepcopy(base_cfg)
         cfg.update(params)
-        reports=[validate_year(results, y, cfg) for y in years]
-        score=sum(r["top2_overlap_avg"] for r in reports) + 0.15*sum(r["winners_correct"] for r in reports) + 0.5*sum(r["rank_accuracy"] for r in reports)
-        cand={"score":round(score,4),"config":cfg,"reports":reports}
-        if best is None or cand["score"] > best["score"]: best=cand
+        reports = [validate_year(results, y, cfg) for y in years]
+        score = sum(r["top2_overlap_avg"] for r in reports) + 0.15 * sum(r["winners_correct"] for r in reports) + 0.5 * sum(r["rank_accuracy"] for r in reports)
+        cand = {"score": round(score, 4), "config": cfg, "reports": reports}
+        if best is None or cand["score"] > best["score"]:
+            best = cand
     return best

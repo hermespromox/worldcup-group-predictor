@@ -1,4 +1,34 @@
 HISTORICAL_GROUPS = {
+    2002: {
+        "A": ["Denmark", "France", "Senegal", "Uruguay"],
+        "B": ["Cameroon", "Germany", "Republic of Ireland", "Saudi Arabia"],
+        "C": ["Argentina", "England", "Nigeria", "Sweden"],
+        "D": ["Paraguay", "Slovenia", "South Africa", "Spain"],
+        "E": ["Brazil", "China", "Costa Rica", "Türkiye"],
+        "F": ["Croatia", "Ecuador", "Italy", "Mexico"],
+        "G": ["Belgium", "Japan", "Russia", "Tunisia"],
+        "H": ["Poland", "Portugal", "South Korea", "United States"],
+    },
+    2006: {
+        "A": ["Costa Rica", "Ecuador", "Germany", "Poland"],
+        "B": ["Argentina", "Ivory Coast", "Netherlands", "Serbia"],
+        "C": ["England", "Paraguay", "Sweden", "Trinidad and Tobago"],
+        "D": ["Angola", "Iran", "Mexico", "Portugal"],
+        "E": ["Australia", "Brazil", "Croatia", "Japan"],
+        "F": ["Czechia", "Ghana", "Italy", "United States"],
+        "G": ["France", "South Korea", "Switzerland", "Togo"],
+        "H": ["Saudi Arabia", "Spain", "Tunisia", "Ukraine"],
+    },
+    2010: {
+        "A": ["France", "Mexico", "South Africa", "Uruguay"],
+        "B": ["Argentina", "Greece", "Nigeria", "South Korea"],
+        "C": ["Algeria", "England", "Slovenia", "United States"],
+        "D": ["Australia", "Germany", "Ghana", "Serbia"],
+        "E": ["Italy", "New Zealand", "Paraguay", "Slovakia"],
+        "F": ["Cameroon", "Denmark", "Japan", "Netherlands"],
+        "G": ["Brazil", "Ivory Coast", "North Korea", "Portugal"],
+        "H": ["Chile", "Honduras", "Spain", "Switzerland"],
+    },
     2014: {
         "A": ["Brazil", "Croatia", "Mexico", "Cameroon"],
         "B": ["Spain", "Netherlands", "Chile", "Australia"],
@@ -31,5 +61,20 @@ HISTORICAL_GROUPS = {
     },
 }
 
-CUTOFFS = {2014: "2014-06-12", 2018: "2018-06-14", 2022: "2022-11-20"}
-WINDOWS = {2014: ("2014-06-12", "2014-06-27"), 2018: ("2018-06-14", "2018-06-29"), 2022: ("2022-11-20", "2022-12-03")}
+CUTOFFS = {
+    2002: "2002-05-30",
+    2006: "2006-06-08",
+    2010: "2010-06-10",
+    2014: "2014-06-12",
+    2018: "2018-06-14",
+    2022: "2022-11-20",
+}
+
+WINDOWS = {
+    2002: ("2002-05-31", "2002-06-15"),
+    2006: ("2006-06-09", "2006-06-24"),
+    2010: ("2010-06-11", "2010-06-26"),
+    2014: ("2014-06-12", "2014-06-27"),
+    2018: ("2018-06-14", "2018-06-29"),
+    2022: ("2022-11-20", "2022-12-03"),
+}
